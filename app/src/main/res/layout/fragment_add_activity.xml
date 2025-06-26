@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/lightest_green">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log a New Activity"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/darkest_green"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Task Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Task Name"
+            android:textColor="@color/dark_green"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/edit_text_task_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g., Watering Tomatoes"
+            android:inputType="textCapSentences"
+            android:padding="12dp"
+            android:background="@drawable/rounded_edittext_background"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Yield Amount (always visible) -->
+        <TextView
+            android:id="@+id/label_yield_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yield Amount"
+            android:textColor="@color/dark_green"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/edit_text_yield_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g., 10"
+            android:inputType="numberDecimal"
+            android:padding="12dp"
+            android:background="@drawable/rounded_edittext_background"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Date of Activity -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date of Activity"
+            android:textColor="@color/dark_green"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/edit_text_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Date"
+            android:focusable="false"
+            android:clickable="true"
+            android:padding="12dp"
+            android:background="@drawable/rounded_edittext_background"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Activity Type -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activity Type"
+            android:textColor="@color/dark_green"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinner_activity_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/activity_types"
+            android:padding="12dp"
+            android:background="@drawable/rounded_spinner_background"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Notes -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notes (Optional)"
+            android:textColor="@color/dark_green"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/edit_text_notes"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:gravity="top"
+            android:hint="Add any additional details here"
+            android:inputType="textMultiLine"
+            android:padding="12dp"
+            android:background="@drawable/rounded_edittext_background"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Photo Preview and Add Button -->
+        <ImageView
+            android:id="@+id/activityPhotoPreview"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_camera"
+            android:scaleType="centerCrop"
+            android:background="@drawable/rounded_background_light_green"
+            android:contentDescription="Activity Photo Preview"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnAddPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Photo (Camera or Gallery)"
+            android:backgroundTint="@color/darkest_green"
+            android:textColor="@android:color/white"
+            android:background="@drawable/rounded_button_bg"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Log Activity Button -->
+        <Button
+            android:id="@+id/button_log_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Log Activity"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/darkest_green"
+            android:padding="12dp"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+</ScrollView> 

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp"
+    app:cardBackgroundColor="@color/rounded_background_light_green">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Header with Plant Name and Close Button -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/plantNameText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Plant Name"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/darkest_green" />
+
+                <ImageButton
+                    android:id="@+id/closeButton"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@android:drawable/ic_menu_close_clear_cancel"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Close" />
+
+            </LinearLayout>
+
+            <!-- Scientific Name -->
+            <TextView
+                android:id="@+id/scientificNameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Scientific Name"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                android:textColor="@color/darkest_green"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Description Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/darkest_green"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/descriptionText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Plant description goes here..."
+                android:textSize="15sp"
+                android:textColor="@color/darkest_green"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Growing Information Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/rounded_background_white"
+                android:padding="16dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="8dp"
+                android:elevation="2dp"
+                android:backgroundTint="@color/rounded_background_white"
+                android:clipToOutline="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Growing Information"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/darkest_green"
+                    android:layout_marginBottom="10dp" />
+
+                <!-- Growing Season -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="6dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🌱 Growing Season:"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/darkest_green"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:id="@+id/growingSeasonText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Season"
+                        android:textSize="15sp"
+                        android:textColor="@color/darkest_green" />
+
+                </LinearLayout>
+
+                <!-- Care Requirements -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="💧 Care Requirements:"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/darkest_green"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:id="@+id/careRequirementsText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Requirements"
+                        android:textSize="15sp"
+                        android:textColor="@color/darkest_green" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Close Dialog Button -->
+            <Button
+                android:id="@+id/closeDialogButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Close"
+                android:textSize="16sp"
+                android:background="@drawable/rounded_button_bg"
+                android:textColor="@color/white"
+                android:paddingVertical="12dp"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</com.google.android.material.card.MaterialCardView> 

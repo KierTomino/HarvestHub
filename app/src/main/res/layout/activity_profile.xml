@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_banana_leaf"
+        android:scaleType="centerCrop"
+        android:contentDescription="Background"
+        android:alpha="0.55" />
+
+    <TextView
+        android:id="@+id/profileTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:shadowColor="#000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:layout_gravity="top|start"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:paddingTop="80dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="24dp">
+
+            <!-- Avatar Selection -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Avatar"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:shadowColor="#000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:id="@+id/avatarImage"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:src="@drawable/ic_camera"
+                    android:background="@drawable/avatar_selector_bg"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Avatar"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_camera"
+                    android:layout_gravity="bottom|end"
+                    android:tint="#FFFFFF"
+                    android:background="#2e4d2c"
+                    android:padding="4dp"
+                    android:contentDescription="Change Avatar" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/userNameDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="User Full Name"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:shadowColor="#000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Basic Info -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Full Name"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:shadowColor="#000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:layout_marginBottom="2dp"
+                android:layout_gravity="start"/>
+            <EditText
+                android:id="@+id/fullName"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Full Name"
+                android:background="@drawable/low_opacity_input_bg"
+                android:padding="12dp"
+                android:textColor="#222"
+                android:textColorHint="#555555"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:shadowColor="#000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:layout_marginBottom="2dp"
+                android:layout_gravity="start"/>
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Username"
+                android:background="@drawable/low_opacity_input_bg"
+                android:padding="12dp"
+                android:textColor="#222"
+                android:textColorHint="#555555"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email Address"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:shadowColor="#000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:layout_marginBottom="2dp"
+                android:layout_gravity="start"/>
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/low_opacity_input_bg"
+                android:padding="12dp"
+                android:textColor="#222"
+                android:textColorHint="#555555"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone Number"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:shadowColor="#000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:layout_marginBottom="2dp"
+                android:layout_gravity="start"/>
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:background="@drawable/low_opacity_input_bg"
+                android:padding="12dp"
+                android:textColor="#222"
+                android:textColorHint="#555555"
+                android:layout_marginBottom="18dp" />
+
+            <!-- Section: Personalization -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bio/About Me"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:shadowColor="#000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:layout_marginBottom="2dp"
+                android:layout_gravity="start"/>
+            <EditText
+                android:id="@+id/bio"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:hint="Bio/About Me"
+                android:background="@drawable/low_opacity_input_bg"
+                android:padding="12dp"
+                android:textColor="#222"
+                android:textColorHint="#555555"
+                android:gravity="top|start"
+                android:layout_marginBottom="12dp"
+                android:inputType="textMultiLine"
+                android:maxLines="3" />
+
+            <!-- Section: Security -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Security"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:shadowColor="#000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_gravity="start"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/changePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Change Password"
+                android:textColor="#fff"
+                app:cornerRadius="16dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="#2e4d2c" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/saveProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                app:cornerRadius="16dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#2e4d2c" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout> 

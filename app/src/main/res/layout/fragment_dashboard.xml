@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_banana_leaf" />
+
+    <!-- Opacity overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B3FFFFFF" /> <!-- 70% white, adjust as needed -->
+
+    <!-- Existing content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Weather Widget Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/weatherCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:strokeColor="#388E3C"
+                app:strokeWidth="1dp"
+                app:cardBackgroundColor="#f5fff0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/weatherIcon"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="12dp"
+                        android:contentDescription="Weather Icon"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/weatherTemp"
+                            android:text="--°C"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:textColor="#388E3C"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/weatherDesc"
+                            android:text="Loading weather..."
+                            android:textColor="#204120"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/weatherLocation"
+                            android:text="Location"
+                            android:textColor="#204120"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Growth Progress Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:strokeColor="#388E3C"
+                app:strokeWidth="1dp"
+                app:cardBackgroundColor="#f5fff0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:text="Growth Progress"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#388E3C"/>
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/growthProgressChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Fertilization & Harvest Schedule Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:strokeColor="#388E3C"
+                app:strokeWidth="1dp"
+                app:cardBackgroundColor="#f5fff0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:text="Fertilization &amp; Harvest Schedule"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#388E3C"
+                        android:layout_marginBottom="12dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="8dp">
+                        <TextView android:id="@+id/nextFertilizationText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Next Fertilization: -" android:textSize="12sp" android:textColor="@android:color/black" android:layout_marginBottom="2dp"/>
+                        <TextView android:id="@+id/lastFertilizationText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Last Fertilization: -" android:textSize="12sp" android:textColor="@android:color/black" android:layout_marginBottom="2dp"/>
+                        <TextView android:id="@+id/nextHarvestText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Next Harvest: -" android:textSize="12sp" android:textColor="@android:color/black" android:layout_marginBottom="2dp"/>
+                        <TextView android:id="@+id/lastHarvestText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Last Harvest: -" android:textSize="12sp" android:textColor="@android:color/black" android:layout_marginBottom="2dp"/>
+                        <TextView android:id="@+id/expectedHarvestText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Expected Harvest: -" android:textSize="12sp" android:textColor="@android:color/black" android:layout_marginBottom="2dp"/>
+                    </LinearLayout>
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/scheduleChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Yield Trend Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:strokeColor="#388E3C"
+                app:strokeWidth="1dp"
+                app:cardBackgroundColor="#f5fff0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:text="Yield Trend"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#388E3C"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="29dp"/>
+
+                    <TextView
+                        android:id="@+id/yieldTrendDateLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="10sp"
+                        android:visibility="gone"
+                        android:layout_marginBottom="4dp"/>
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/yieldTrendChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="260dp"
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Plant Details Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:strokeColor="#388E3C"
+                app:strokeWidth="1dp"
+                app:cardBackgroundColor="#f5fff0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:text="Plant Details"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#388E3C"/>
+                    <TableLayout
+                        android:id="@+id/plantDetailsTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="*"
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

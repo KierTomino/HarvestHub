@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HarvestHub</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string-array name="activity_types">
+        <item>Watered</item>
+        <item>Fertilized</item>
+        <item>Planted Seeds</item>
+        <item>Weeded</item>
+        <item>Harvested</item>
+        <item>Pest Control</item>
+    </string-array>
+
+    <string-array name="goal_types">
+        <item>Yield Target</item>
+        <item>Area Cultivation</item>
+        <item>Water Conservation</item>
+        <item>Pest Management</item>
+        <item>Soil Health</item>
+        <item>Equipment Maintenance</item>
+        <item>Skill Development</item>
+        <item>Market Sales</item>
+        <item>Cost Reduction</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="goal_priorities">
+        <item>High</item>
+        <item>Medium</item>
+        <item>Low</item>
+    </string-array>
+</resources>

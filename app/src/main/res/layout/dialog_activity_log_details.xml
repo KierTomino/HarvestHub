@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/detailsType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="Type"/>
+
+    <TextView
+        android:id="@+id/detailsDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Date"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/detailsDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Description"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/detailsNotes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Notes"
+        android:layout_marginTop="8dp"/>
+
+    <ImageView
+        android:id="@+id/detailsPhoto"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:contentDescription="Activity photo" />
+
+    <Button
+        android:id="@+id/btnCloseDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Close"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout> 
