@@ -37,6 +37,9 @@ This is a mobile application built for Android that focuses on crop management a
 ### 7. Plant Details  
 ![15](https://github.com/user-attachments/assets/9b3e7298-7146-4f1a-a478-85f4b4bf2a40) ![16](https://github.com/user-attachments/assets/2dd0448d-52f7-46c3-91b9-7763bb8d8426) ![17](https://github.com/user-attachments/assets/adb15529-241d-4616-9892-65f2bbd7828a)
 
+## Demo Video
+https://youtu.be/tir58gKSrS8?si=GUctoHzjjbBOsMuq
+
 ## Researcher/Developers:
 
 - Allen Eugene A. Barte  
